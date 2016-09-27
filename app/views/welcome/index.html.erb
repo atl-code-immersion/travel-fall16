@@ -1,4 +1,4 @@
-<h1>Welcome to My Travel Site</h1>
+<h1 class="oswald">Welcome to My Travel Site</h1>
 <p>You'll find all sorts of travel stuff here!</p>
 
 <p><%= @homestate %></p>
@@ -14,14 +14,14 @@
 <!-- Storing images in Array -->
 <p>
 	<% @images.each do |image| %>
-		<%= image_tag image, alt: image, class: "travel-pics" %>
+		<%= image_tag image, alt: image, class: "travel-pics img-responsive" %>
 	<% end %>
 </p>
 
 <!-- Storing images & custom alt messages in Hash -->
 <p>
 	<% @picture_hash.each do |key, value| %>
-		<%= image_tag key, alt: value, class: "travel-pics" %>
+		<%= image_tag key, alt: value, class: "travel-pics img-responsive" %>
 	<% end %>
 </p>
 
