@@ -1,0 +1,32 @@
+<h1>Welcome to My Travel Site</h1>
+<p>You'll find all sorts of travel stuff here!</p>
+
+<p><%= @homestate %></p>
+
+<ul>
+	<% @countries.each do |country| %>
+		<li><%= country %></li>
+	<% end %>
+</ul>
+
+<%#= "To comment out Ruby tags use a hashtag after the first % symbol" %>
+
+<!-- Storing images in Array -->
+<p>
+	<% @images.each do |image| %>
+		<%= image_tag image, alt: image, class: "travel-pics" %>
+	<% end %>
+</p>
+
+<!-- Storing images & custom alt messages in Hash -->
+<p>
+	<% @picture_hash.each do |key, value| %>
+		<%= image_tag key, alt: value, class: "travel-pics" %>
+	<% end %>
+</p>
+
+
+
+
+
+
