@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <%= "#{@destination.city}, #{@destination.country}" %>
+</h2>
+
+<p>
+	<strong>Pop.:</strong> <%= number_to_human(@destination.population) %>
+</p>
+
+<p>
+	<%= image_tag @destination.image.url %>
+</p>
+
+<p>
+  <%= @destination.description %>
+</p>
+
+<p>
+	<%= link_to 'Edit', edit_destination_path(@destination), class: "btn btn-warning" %> 
+	<%= link_to 'Back', destinations_path, class: "btn btn-primary" %>
+</p>
